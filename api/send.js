@@ -1,13 +1,14 @@
 export default function handler(req, res) {
-  const { ip, port } = req.query;
+  const { id } = req.query;
 
-  if (!ip || !port) {
-    return res.status(400).json({ error: "ip or port missing" });
+  if (!id) {
+    return res.status(400).json({
+      error: "id missing"
+    });
   }
 
   res.status(200).json({
-    ip,
-    port,
+    id,
     status: "ok"
   });
 }
