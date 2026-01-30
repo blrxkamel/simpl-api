@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "functions": {
+    "api/send.js": {
+      "maxDuration": 10,
+      "memory": 1024
+    }
+  },
+  "routes": [
+    {
+      "src": "/send",
+      "dest": "/api/send.js"
+    }
+  ]
+}
